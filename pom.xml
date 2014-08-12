@@ -22,7 +22,7 @@
                             <artifactId>cas-server-webapp</artifactId>
                             <excludes>
                                 <exclude>WEB-INF/cas.properties</exclude>
-                                <exclude>WEB-INF/classes/log4j.xml</exclude>                                
+                                <exclude>WEB-INF/classes/log4j.xml</exclude>
                             </excludes>
                         </overlay>
                     </overlays>
@@ -60,7 +60,7 @@
     </dependencies>
 
     <properties>
-        <cas.version>4.1.0-SNAPSHOT</cas.version>
+        <cas.version>4.0.0</cas.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
