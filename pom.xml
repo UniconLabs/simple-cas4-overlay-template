@@ -50,17 +50,10 @@
             <type>war</type>
             <scope>runtime</scope>
         </dependency>
-        <dependency>
-            <groupId>org.jasig.cas</groupId>
-            <artifactId>cas-server-integration-restlet</artifactId>
-            <version>${cas.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-
     </dependencies>
 
     <properties>
-        <cas.version>4.0.0</cas.version>
+        <cas.version>4.1.0-SNAPSHOT</cas.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
