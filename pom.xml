@@ -50,10 +50,19 @@
             <type>war</type>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- Separate micro addons -->
         <dependency>
-            <groupId>org.jasig.cas</groupId>
-            <artifactId>cas-server-integration-restlet</artifactId>
-            <version>${cas.version}</version>
+            <groupId>net.unicon.cas</groupId>
+            <artifactId>cas-addon-registered-services-commons</artifactId>
+            <version>1.0.0.RC1</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.unicon.cas</groupId>
+            <artifactId>cas-addon-spring-resource-reloading-support</artifactId>
+            <version>1.0.0.BUILD-SNAPSHOT</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -64,14 +73,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>sonatype-releases</id>
-            <url>http://oss.sonatype.org/content/repositories/releases/</url>
-        </repository>
-        <repository>
-            <id>sonatype-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </repository>
-    </repositories>
 </project>

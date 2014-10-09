@@ -82,18 +82,7 @@
     <listener-class>
       org.jasig.cas.web.init.SafeContextLoaderListener
     </listener-class>
-  </listener>
-
-    <servlet>
-        <servlet-name>restlet</servlet-name>
-        <servlet-class>org.restlet.ext.spring.RestletFrameworkServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-     
-    <servlet-mapping>
-        <servlet-name>restlet</servlet-name>
-        <url-pattern>/v1/*</url-pattern>
-    </servlet-mapping>
+  </listener>    
 
   <!--
     - This is the Spring dispatcher servlet which delegates all requests to the
@@ -119,7 +108,7 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
-	
+
   <servlet-mapping>
     <servlet-name>cas</servlet-name>
     <url-pattern>/login</url-pattern>
@@ -144,7 +133,7 @@
     <servlet-name>cas</servlet-name>
     <url-pattern>/p3/serviceValidate</url-pattern>
   </servlet-mapping>
-  
+
   <servlet-mapping>
     <servlet-name>cas</servlet-name>
     <url-pattern>/proxy</url-pattern>
@@ -159,7 +148,7 @@
     <servlet-name>cas</servlet-name>
     <url-pattern>/p3/proxyValidate</url-pattern>
   </servlet-mapping>
-  
+
   <servlet-mapping>
     <servlet-name>cas</servlet-name>
     <url-pattern>/CentralAuthenticationService</url-pattern>
