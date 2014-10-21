@@ -137,13 +137,6 @@
         <entry key="uid" value="uid" />
     </util:map>
 
-    <!--
-    Sample, in-memory data store for the ServiceRegistry. A real implementation
-    would probably want to replace this with the JPA-backed ServiceRegistry DAO
-    The name of this bean should remain "serviceRegistryDao".
-    +-->
-    <bean id="serviceRegistryDao" class="org.jasig.cas.services.InMemoryServiceRegistryDaoImpl"
-            p:registeredServices-ref="registeredServicesList" />
 
     <util:list id="registeredServicesList">
         <bean class="org.jasig.cas.services.RegexRegisteredService">
