@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:task="http://www.springframework.org/schema/task"
        xmlns:cas-reg-svc="http://unicon.net/schema/cas/registered-services"
+       xmlns:cas-json="http://unicon.net/schema/cas/json-service-registry"
+       xmlns:cas-resource="http://unicon.net/schema/cas/spring-resource"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/task
+                           http://www.springframework.org/schema/task/spring-task.xsd
                            http://unicon.net/schema/cas/registered-services
-                           http://unicon.net/schema/cas/cas-addon-registered-services.xsd">
+                           http://unicon.net/schema/cas/cas-addon-registered-services.xsd
+                           http://unicon.net/schema/cas/json-service-registry
+                           http://unicon.net/schema/cas/cas-addon-json-service-registry.xsd
+                           http://unicon.net/schema/cas/spring-resource
+                           http://unicon.net/schema/cas/cas-addon-spring-resource.xsd">
 
 
-    <cas-reg-svc:disable-default-registered-services-reloading/>    
 
- </beans>
+
+    <cas-reg-svc:disable-default-registered-services-reloading/>
+
+    <task:annotation-driven/>
+    <cas-resource:change-detector id="jsonServiceRegistryResourceChangeWatcher"
+                                  watched-resource="file:/etc/cas/servicesRegistry.json"/>
+
+    <cas-json:services-registry/>
+
+</beans>
