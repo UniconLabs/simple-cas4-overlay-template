@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:task="http://www.springframework.org/schema/task"
        xmlns:cas-reg-svc="http://unicon.net/schema/cas/registered-services"
-       xmlns:cas-json="http://unicon.net/schema/cas/json-service-registry"
+       xmlns:cas-external="http://unicon.net/schema/cas/yaml-service-registry"
        xmlns:cas-resource="http://unicon.net/schema/cas/spring-resource"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -11,8 +11,8 @@
                            http://www.springframework.org/schema/task/spring-task.xsd
                            http://unicon.net/schema/cas/registered-services
                            http://unicon.net/schema/cas/cas-addon-registered-services.xsd
-                           http://unicon.net/schema/cas/json-service-registry
-                           http://unicon.net/schema/cas/cas-addon-json-service-registry.xsd
+                           http://unicon.net/schema/cas/yaml-service-registry
+                           http://unicon.net/schema/cas/cas-addon-yaml-service-registry.xsd
                            http://unicon.net/schema/cas/spring-resource
                            http://unicon.net/schema/cas/cas-addon-spring-resource.xsd">
 
@@ -22,9 +22,9 @@
     <cas-reg-svc:disable-default-registered-services-reloading/>
 
     <task:annotation-driven/>
-    <cas-resource:change-detector id="jsonServiceRegistryResourceChangeWatcher"
-                                  watched-resource="file:/etc/cas/servicesRegistry.json"/>
+    <cas-resource:change-detector id="yamlServiceRegistryResourceChangeWatcher"
+                                  watched-resource="file:/etc/cas/servicesRegistry.yml"/>
 
-    <cas-json:services-registry/>
+    <cas-external:yaml-services-registry/>
 
 </beans>
