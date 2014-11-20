@@ -47,35 +47,20 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Separate micro addons -->
-        <!--<dependency>
-            <groupId>net.unicon.cas</groupId>
-            <artifactId>cas-addon-registered-services-commons</artifactId>
-            <version>1.0.0.RC1</version>
-            <scope>runtime</scope>
+        <dependency>
+            <groupId>org.jasig.cas</groupId>
+            <artifactId>cas-server-core</artifactId>
+            <version>${cas.version}</version>
+            <scope>compile</scope>
         </dependency>
 
+        <!-- Separate micro addons -->
         <dependency>
             <groupId>net.unicon.cas</groupId>
-            <artifactId>cas-addon-spring-resource-reloading-support</artifactId>
-            <version>1.0.0.BUILD-SNAPSHOT</version>
-            <scope>runtime</scope>
-        </dependency> -->
-
-        <dependency>
-            <groupId>net.unicon.cas</groupId>
-            <artifactId>cas-addon-json-services-registry</artifactId>
+            <artifactId>cas-addon-yaml-services-registry</artifactId>
             <version>1.0.0-RC1</version>
             <scope>runtime</scope>
         </dependency>
-
-        <dependency>
-            <groupId>net.unicon.cas</groupId>
-            <artifactId>cas-addon-registered-services-authorization</artifactId>
-            <version>1.0.0-RC2-SNAPSHOT</version>
-            <scope>runtime</scope>
-        </dependency>
-
     </dependencies>
 
     <properties>
@@ -84,5 +69,16 @@
         <maven.compiler.target>1.7</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>sonatype-releases</id>
+            <url>http://oss.sonatype.org/content/repositories/releases/</url>
+        </repository>
+        <repository>
+            <id>sonatype-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
 
 </project>
