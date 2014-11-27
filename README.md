@@ -10,7 +10,7 @@ This overlay could be freely used as a starting template for local CAS maven war
 <cas.version>4.0.0</cas.version>
 ```
 
-# Minimum Requirements
+# Recommended Requirements
 * JDK 1.7+
 * Apache Maven 3+
 * Servlet container supporting Servlet 3+ spec (e.g. Apache Tomcat 7+)
