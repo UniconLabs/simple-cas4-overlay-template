@@ -22,5 +22,11 @@ and configured to satisfy local CAS installation needs. Current files are:
 
 # Deployment
 
+## Maven
 * Execute `mvn clean package`
 * Deploy resultant `target/cas.war` to a Servlet container of choice.
+
+## Ant
+
+* Define `CATALINA_HOME` and `MAVEN_HOME`
+* Execute `ant deploy`

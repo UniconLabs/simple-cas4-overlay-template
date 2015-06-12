@@ -31,7 +31,7 @@
 	<property name="cas.resources.dir" value="/etc/cas" />
 	
 	<!-- ******************* MAVEN PROPERTIES******************** -->
-	<condition property="mavenExecutableFile" value="mvn.bat" else="mvn">
+	<condition property="mavenExecutableFile" value="mvn.cmd" else="mvn">
 		<os family="windows" />
 	</condition>
 	<var name="mavenExecutable" value="${env.M2_HOME}\bin\${mavenExecutableFile}"/>
