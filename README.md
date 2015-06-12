@@ -1,13 +1,11 @@
-simple-cas4-overlay-template
+CAS4 Overlay Template
 ============================
 
-Generic CAS maven war overlay to exercise the latest versions of CAS 4.x line
-
-This overlay could be freely used as a starting template for local CAS maven war overlays.
+Generic CAS maven war overlay to exercise the latest versions of CAS 4.x line. This overlay could be freely used as a starting template for local CAS maven war overlays.
 
 # Versions
 ```xml
-<cas.version>4.0.1</cas.version>
+<cas.version>4.0.2</cas.version>
 ```
 
 # Recommended Requirements
@@ -25,4 +23,4 @@ and configured to satisfy local CAS installation needs. Current files are:
 # Deployment
 
 * Execute `mvn clean package`
-* Deploy resultant `target/cas.war` to a Servlet container of choice
+* Deploy resultant `target/cas.war` to a Servlet container of choice.
