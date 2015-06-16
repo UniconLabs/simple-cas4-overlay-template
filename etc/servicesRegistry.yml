@@ -1,0 +1,37 @@
+---
+  services:
+    - !serviceWithAttributes
+      id: 1
+      name: ONE
+      description: Google service
+      serviceId: https://www.google.com/**
+      evaluationOrder: 1
+      enabled: true
+      ssoEnabled: true
+      anonymousAccess: false
+      allowedToProxy: false
+      allowedAttributes: [org, password]
+      #ignoreAttributes: true
+      #usernameAttribute: cn
+      logoutType: FRONT_CHANNEL
+      extraAttributes:
+        authzAttributes:
+          memberOf: [group1, group2]
+          anotherAttr: val
+        unauthorizedUrl: http://exammple.com
+
+
+    - !serviceWithAttributes
+      id: 2
+      name: TWO
+      serviceId: https://yahoo.com
+      evaluationOrder: 2
+      attributeFilter: !regexAttributeFilter ["https://.+"]
+
+    - !regexServiceWithAttributes
+      id: 3
+      name: THREE
+      serviceId: ^(imaps?)://.*
+      evaluationOrder: 3
+      attributeFilter: !defaultAttributeFilter []
+      requiredHandlers: [handler1, handler2]
