@@ -58,25 +58,13 @@
         <dependency>
             <groupId>net.unicon.cas</groupId>
             <artifactId>cas-addon-yaml-services-registry</artifactId>
-<<<<<<< HEAD
             <version>1.0.0-GA</version>
-=======
-            <version>1.0.0-RC1</version>
->>>>>>> 4a8f33102ce1bf8a93fdb992173e85e14d805efa
-            <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>net.unicon.cas</groupId>
             <artifactId>cas-addon-hazelcast-ticket-registry</artifactId>
-<<<<<<< HEAD
             <version>1.0.0-GA</version>
-            <scope>compile</scope>
-        </dependency>
-
-=======
-            <version>1.0.0-RC1</version>
-            <scope>compile</scope>
         </dependency>
 
         <dependency>
@@ -85,8 +73,6 @@
             <version>${cas.version}</version>
         </dependency>
 
-
->>>>>>> 4a8f33102ce1bf8a93fdb992173e85e14d805efa
     </dependencies>
 
     <properties>
