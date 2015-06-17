@@ -76,7 +76,7 @@
         <!-- Shibboleth Attribute resolver -->
         <dependency>
             <groupId>net.shibboleth.idp</groupId>
-            <artifactId>idp-attribute-resolver-api</artifactId>
+            <artifactId>idp-attribute-resolver-spring</artifactId>
             <version>3.1.1</version>
         </dependency>
 
