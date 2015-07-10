@@ -5,7 +5,7 @@ Generic CAS maven war overlay to exercise the latest versions of CAS 4.x line. T
 
 # Versions
 ```xml
-<cas.version>4.0.2</cas.version>
+<cas.version>4.0.3</cas.version>
 ```
 
 # Recommended Requirements
