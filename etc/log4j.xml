@@ -45,7 +45,7 @@
         <appender-ref ref="cas" />
     </logger>
 
-    <logger name="com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager">
+    <logger name="org.jasig.inspektr.audit.support.Slf4jLoggingAuditTrailManager">
         <level value="INFO" />
         <appender-ref ref="cas" />
     </logger>
