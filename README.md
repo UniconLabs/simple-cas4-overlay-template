@@ -9,7 +9,7 @@ Generic CAS maven war overlay to exercise the latest versions of CAS 4.x line. T
 ```
 
 # Recommended Requirements
-* JDK 1.7+
+* JDK 1.8+
 * Apache Maven 3+
 * Servlet container supporting Servlet 3+ spec (e.g. Apache Tomcat 7+)
 
@@ -18,7 +18,7 @@ The `etc` directory contains the sample configuration files that would need to b
 and configured to satisfy local CAS installation needs. Current files are:
 
 * `cas.properties`
-* `log4j.xml`
+* `log4j2.xml`
 
 # Deployment
 
