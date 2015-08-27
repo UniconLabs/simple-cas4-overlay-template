@@ -22,7 +22,7 @@
                             <artifactId>cas-server-webapp</artifactId>
                             <excludes>
                                 <exclude>WEB-INF/cas.properties</exclude>
-                                <exclude>WEB-INF/classes/log4j.xml</exclude>
+                                <exclude>WEB-INF/classes/log4j2.xml</exclude>
                             </excludes>
                         </overlay>
                     </overlays>
@@ -31,7 +31,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
             </plugin>
 
         </plugins>
@@ -46,11 +50,10 @@
             <type>war</type>
             <scope>runtime</scope>
         </dependency>
-
     </dependencies>
 
     <properties>
-        <cas.version>4.0.4</cas.version>
+        <cas.version>4.1.0-RC2</cas.version>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
