@@ -9,7 +9,7 @@ Generic CAS maven war overlay to exercise the latest versions of CAS 4.x line. T
 ```
 
 # Recommended Requirements
-* JDK 1.8+
+* JDK 1.7+
 * Apache Maven 3+
 * Servlet container supporting Servlet 3+ spec (e.g. Apache Tomcat 7+)
 
