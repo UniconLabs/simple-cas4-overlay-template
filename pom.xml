@@ -57,6 +57,12 @@
             <version>${cas.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.jasig.cas</groupId>
+            <artifactId>cas-server-support-ldap</artifactId>
+            <version>${cas.version}</version>
+        </dependency>
+
         <!-- For debugging in IDE -->
         <dependency>
             <groupId>org.jasig.cas</groupId>
@@ -74,7 +80,7 @@
     </dependencies>
 
     <properties>
-        <cas.version>4.1.0-RC2</cas.version>
+        <cas.version>4.1.0</cas.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
