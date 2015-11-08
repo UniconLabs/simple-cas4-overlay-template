@@ -10,6 +10,11 @@
 
     <build>
         <plugins>
+        	<plugin>
+		        <groupId>com.rimerosolutions.maven.plugins</groupId>
+		        <artifactId>wrapper-maven-plugin</artifactId>
+		        <version>0.0.4</version>
+		    </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -37,7 +42,25 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
-
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${maven-jetty-plugin.version}</version>
+                <configuration>
+                    <jettyXml>${basedir}/etc/jetty/jetty.xml,${basedir}/etc/jetty/jetty-ssl.xml,${basedir}/etc/jetty/jetty-https.xml</jettyXml>
+                    <systemProperties>
+                        <systemProperty>
+                            <name>org.eclipse.jetty.annotations.maxWait</name>
+                            <value>240</value>
+                        </systemProperty>
+                    </systemProperties>
+                    <webApp>
+                        <contextPath>/cas</contextPath>
+                        <overrideDescriptor>${basedir}/etc/jetty/web.xml</overrideDescriptor>
+                    </webApp>
+                    <jvmArgs>-Xdebug -Xrunjdwp:transport=dt_socket,address=5000,server=y,suspend=n</jvmArgs>
+                </configuration>
+            </plugin>
         </plugins>
         <finalName>cas</finalName>
     </build>
@@ -54,6 +77,7 @@
 
     <properties>
         <cas.version>4.1.1</cas.version>
+        <maven-jetty-plugin.version>9.3.3.v20150827</maven-jetty-plugin.version>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -10,23 +10,36 @@ Generic CAS maven war overlay to exercise the latest versions of CAS 4.x line. T
 
 # Recommended Requirements
 * JDK 1.7+
-* Apache Maven 3+
-* Servlet container supporting Servlet 3+ spec (e.g. Apache Tomcat 7+)
 
 # Configuration
-The `etc` directory contains the sample configuration files that would need to be copied to an external file system location (`/etc/cas` by default)
-and configured to satisfy local CAS installation needs. Current files are:
+The `etc` directory contains the configuration files that need to be copied to `/cas/etc`. 
+
+Current files are:
 
 * `cas.properties`
 * `log4j2.xml`
 
+# Build
+
+```bash
+mvnw clean package`
+```
+
 # Deployment
 
-## Maven
-* Execute `mvn clean package`
-* Deploy resultant `target/cas.war` to a Servlet container of choice.
+## Embedded Jetty
 
-## Ant
+* Create a Java keystore at `/etc/cas/jetty/thekeystore` with the password `changeit`. 
+* Import your CAS server certificate inside this keystore.
 
-* Define `CATALINA_HOME` and `MAVEN_HOME`
-* Execute `ant deploy`
+```bash
+mvnw jetty:run-forked
+```
+
+CAS will be available at:
+
+* `http://cas.server.name:8080/cas`
+* `https://cas.server.name:8443/cas`
+
+## External
+Deploy resultant `target/cas.war` to a Servlet container of choice.
