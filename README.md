@@ -11,7 +11,7 @@ Generic CAS maven war overlay to exercise the latest versions of CAS 4.x line. T
 # Recommended Requirements
 * JDK 1.7+
 
-# Configuration
+# Configuration 
 The `etc` directory contains the configuration files that need to be copied to `/cas/etc`. 
 
 Current files are:
@@ -22,13 +22,13 @@ Current files are:
 # Build
 
 ```bash
-mvnw clean package`
+mvnw clean package
 ```
 
 or
 
 ```bash
-mvnw.bat clean package`
+mvnw.bat clean package
 ```
 
 # Deployment
