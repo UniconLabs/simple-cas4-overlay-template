@@ -25,6 +25,12 @@ Current files are:
 mvnw clean package`
 ```
 
+or
+
+```bash
+mvnw.bat clean package`
+```
+
 # Deployment
 
 ## Embedded Jetty
