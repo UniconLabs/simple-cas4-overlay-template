@@ -11,6 +11,11 @@
     <build>
         <plugins>
             <plugin>
+		 <groupId>com.rimerosolutions.maven.plugins</groupId>
+		 <artifactId>wrapper-maven-plugin</artifactId>
+		 <version>0.0.4</version>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.6</version>
@@ -37,7 +42,25 @@
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
-
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${maven-jetty-plugin.version}</version>
+                <configuration>
+                    <jettyXml>${basedir}/etc/jetty/jetty.xml,${basedir}/etc/jetty/jetty-ssl.xml,${basedir}/etc/jetty/jetty-https.xml</jettyXml>
+                    <systemProperties>
+                        <systemProperty>
+                            <name>org.eclipse.jetty.annotations.maxWait</name>
+                            <value>240</value>
+                        </systemProperty>
+                    </systemProperties>
+                    <webApp>
+                        <contextPath>/cas</contextPath>
+                        <overrideDescriptor>${basedir}/etc/jetty/web.xml</overrideDescriptor>
+                    </webApp>
+                    <jvmArgs>-Xdebug -Xrunjdwp:transport=dt_socket,address=5000,server=y,suspend=n</jvmArgs>
+                </configuration>
+            </plugin>
         </plugins>
         <finalName>cas</finalName>
     </build>
@@ -77,12 +100,19 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <artifactId>cas-server-support-saml</artifactId>
+            <version>${cas.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
     </dependencies>
 
     <properties>
-        <cas.version>4.1.0</cas.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <cas.version>4.1.2</cas.version>
+        <maven-jetty-plugin.version>9.3.6.v20151106</maven-jetty-plugin.version>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
