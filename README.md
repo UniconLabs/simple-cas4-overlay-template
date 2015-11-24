@@ -8,7 +8,7 @@ Generic CAS maven war overlay to exercise the latest versions of CAS. This overl
 <cas.version>4.1.2</cas.version>
 ```
 
-# Recommended Requirements
+# Requirements
 * JDK 1.7+
 
 # Configuration 
