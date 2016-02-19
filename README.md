@@ -1,11 +1,11 @@
 CAS Overlay Template
 ============================
 
-Generic CAS maven war overlay to exercise the latest versions of CAS. This overlay could be freely used as a starting template for local CAS maven war overlays.
+Generic CAS maven war overlay to exercise the latest versions of CAS. This overlay could be freely used as a starting template for local CAS maven war overlays. The CAS services management overlay is available [here](https://github.com/Jasig/cas-services-management-overlay).
 
 # Versions
 ```xml
-<cas.version>4.1.4</cas.version>
+<cas.version>4.1.5</cas.version>
 ```
 
 # Requirements
