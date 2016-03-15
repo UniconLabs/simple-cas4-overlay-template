@@ -61,7 +61,7 @@
 	                <webAppConfig>
 	                    <allowDuplicateFragmentNames>true</allowDuplicateFragmentNames>
 	                </webAppConfig>
-                    <jvmArgs>-Xdebug -Xrunjdwp:transport=dt_socket,address=5000,server=y,suspend=n</jvmArgs>
+                    <jvmArgs>-Dlog4j.configurationFile=/etc/cas/log4j2.xml -Xdebug -Xrunjdwp:transport=dt_socket,address=5000,server=y,suspend=n</jvmArgs>
                 </configuration>
             </plugin>
         </plugins>
@@ -79,7 +79,7 @@
     </dependencies>
 
     <properties>
-        <cas.version>4.2.0-RC1</cas.version>
+        <cas.version>4.2.0-RC4-SNAPSHOT</cas.version>
         <maven-jetty-plugin.version>9.3.6.v20151106</maven-jetty-plugin.version>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
